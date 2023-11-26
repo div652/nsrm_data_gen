@@ -1,0 +1,114 @@
+[
+    {
+        "template_id": 1,
+        "num_step": 1,
+        "text": {
+            "simple": [
+                "put the <C2> <T2> 2 steps <A1> the <C1> <T1>"
+            ]
+        },
+        "program": [
+            {
+                "action": "<A1>",
+                "inputs": "<O1> <O2>"
+            }
+        ],
+        "constraints": {
+            "actions": ["BACK", "FRONT", "TOP"],
+            "action_preference": ["FRONT"],
+            "inputs": [
+                1,
+                2
+            ]
+        },
+        "checkOnTable" : ["FRONT",2],
+        "Relations": [],
+        "num_unique_actions": 1,
+        "num_unique_objects": 2,
+        "numIdenticalToFirst": 0,
+
+        "nodes": [
+
+            {
+                "type": "scene",
+                "inputs": [],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "filter_type",
+                "inputs": [
+                    0
+                ],
+                "value_inputs": [
+                    "<T1>"
+                ],
+                "action": false
+            },
+            {
+                "type": "filter_color",
+                "inputs": [
+                    1
+                ],
+                "value_inputs": [
+                    "<C1>"
+                ],
+                "action": false
+            },
+            {
+                "type": "unique",
+                "inputs": [
+                    2
+                ],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "scene",
+                "inputs": [],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "filter_type",
+                "inputs": [
+                    4
+                ],
+                "value_inputs": [
+                    "<T2>"
+                ],
+                "action": false
+            },
+            {
+                "type": "filter_color",
+                "inputs": [
+                    5
+                ],
+                "value_inputs": [
+                    "<C2>"
+                ],
+                "action": false
+            },
+            {
+                "type": "unique",
+                "inputs": [
+                    6
+                ],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "move",
+                "inputs": [
+                    7,
+                    3
+                ],
+                "value_inputs": [
+                    "<A1>"
+                ],
+                "distance":2,
+                "action": true
+            }
+        ]
+        }
+]

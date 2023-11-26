@@ -1,0 +1,24 @@
+{
+    "train_count_downscale": 1,
+    "val_count_downscale": 1000,
+    "test_count_downscale": 10,
+    "categories":[
+        {
+            "type":"cube",
+            "num_objects": 11,
+            "steps":0,
+            "relational": false,
+            "language":"simple",
+            "count": 0
+        },
+        {
+            "type":"cube",
+            "num_objects": 6,
+            "steps":59,
+            "relational": false,
+            "language":"simple",
+            "count": 1
+        }
+       
+    ]
+}

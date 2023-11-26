@@ -1,0 +1,159 @@
+[
+    {
+        "template_id": 1,
+        "num_step": 1,
+        "text": {
+            "simple": [
+                "put the <C13> <T13> <A1> the <C12> <T12> and put the <C14> <T14> 3 steps <A2> the <C13> <T13>"
+            ]
+        },
+        "program": [
+            {
+                "action": "<A1>",
+                "inputs": "<O1> <O2>"
+            }
+        ],
+        "constraints": {
+            "actions": ["RIGHT", "LEFT", "TOP"],
+            "action_preference": ["TOP","LEFT"],
+            "inputs": [
+                1,
+                2
+            ]
+        },
+        "Relations": ["RIGHT", "RIGHT", "RIGHT","TOP","LEFT","LEFT","LEFT","TOP","RIGHT","RIGHT","RIGHT"],
+        "num_unique_actions": 13,
+        "num_unique_objects": 7,
+        "numIdenticalToFirst": 7,
+
+        "nodes": [
+
+            {
+                "type": "scene",
+                "inputs": [],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "filter_type",
+                "inputs": [
+                    0
+                ],
+                "value_inputs": [
+                    "<T12>"
+                ],
+                "action": false
+            },
+            {
+                "type": "filter_color",
+                "inputs": [
+                    1
+                ],
+                "value_inputs": [
+                    "<C12>"
+                ],
+                "action": false
+            },
+            {
+                "type": "unique",
+                "inputs": [
+                    2
+                ],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "scene",
+                "inputs": [],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "filter_type",
+                "inputs": [
+                    4
+                ],
+                "value_inputs": [
+                    "<T13>"
+                ],
+                "action": false
+            },
+            {
+                "type": "filter_color",
+                "inputs": [
+                    5
+                ],
+                "value_inputs": [
+                    "<C13>"
+                ],
+                "action": false
+            },
+            {
+                "type": "unique",
+                "inputs": [
+                    6
+                ],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "move",
+                "inputs": [
+                    7,
+                    3
+                ],
+                "value_inputs": [
+                    "<A1>"
+                ],
+                "action": true
+            },
+            {
+                "type": "scene",
+                "inputs": [],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "filter_type",
+                "inputs": [
+                    9
+                ],
+                "value_inputs": [
+                    "<T14>"
+                ],
+                "action": false
+            },
+            {
+                "type": "filter_color",
+                "inputs": [
+                    10
+                ],
+                "value_inputs": [
+                    "<C14>"
+                ],
+                "action": false
+            },
+            {
+                "type": "unique",
+                "inputs": [
+                    11
+                ],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "move",
+                "inputs": [
+                    12,
+                    7
+                ],
+                "value_inputs": [
+                    "<A2>"
+                ],
+                "action": true,
+                "distance":3
+            }
+
+        ]
+        }
+]

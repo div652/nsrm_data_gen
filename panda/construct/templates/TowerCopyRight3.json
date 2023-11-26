@@ -1,0 +1,206 @@
+[
+    {
+        "template_id": 1,
+        "num_step": 1,
+        "text": {
+            "simple": [
+                "Construct a tower of <C4> <T4> blocks with the same height as the tower of <C1> <T1> blocks and to the right of it"
+            ]
+        },
+        "program": [
+            {
+                "action": "<A1>",
+                "inputs": "<O1> <O2>"
+            }
+        ],
+        "constraints": {
+            "actions": ["RIGHT", "LEFT", "TOP"],
+            "action_preference": ["RIGHT","TOP" , "TOP"],
+            "inputs": [
+                1,
+                2
+            ]
+        },
+        "Relations": ["TOP", "TOP"],
+        "checkOnTable" : ["RIGHT",1],
+        "num_unique_actions": 3,
+        "num_unique_objects": 4,
+        "numIdenticalToFirst": 2,
+
+        "nodes": [
+
+            {
+                "type": "scene",
+                "inputs": [],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "filter_type",
+                "inputs": [
+                    0
+                ],
+                "value_inputs": [
+                    "<T1>"
+                ],
+                "action": false
+            },
+            {
+                "type": "filter_color",
+                "inputs": [
+                    1
+                ],
+                "value_inputs": [
+                    "<C1>"
+                ],
+                "action": false
+            },
+            {
+                "type": "unique",
+                "inputs": [
+                    2
+                ],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "scene",
+                "inputs": [],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "filter_type",
+                "inputs": [
+                    4
+                ],
+                "value_inputs": [
+                    "<T4>"
+                ],
+                "action": false
+            },
+            {
+                "type": "filter_color",
+                "inputs": [
+                    5
+                ],
+                "value_inputs": [
+                    "<C4>"
+                ],
+                "action": false
+            },
+            {
+                "type": "unique",
+                "inputs": [
+                    6
+                ],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "move",
+                "inputs": [
+                    7,
+                    3
+                ],
+                "value_inputs": [
+                    "<A1>"
+                ],
+                "action": true
+            },
+            {
+                "type": "scene",
+                "inputs": [],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "filter_type",
+                "inputs": [
+                    9
+                ],
+                "value_inputs": [
+                    "<T5>"
+                ],
+                "action": false
+            },
+            {
+                "type": "filter_color",
+                "inputs": [
+                    10
+                ],
+                "value_inputs": [
+                    "<C5>"
+                ],
+                "action": false
+            },
+            {
+                "type": "unique",
+                "inputs": [
+                    11
+                ],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "move",
+                "inputs": [
+                    12,
+                    7
+                ],
+                "value_inputs": [
+                    "<A2>"
+                ],
+                "action": true,
+                "distance":1
+            },
+            {
+                "type": "scene",
+                "inputs": [],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "filter_type",
+                "inputs": [
+                    14
+                ],
+                "value_inputs": [
+                    "<T6>"
+                ],
+                "action": false
+            },
+            {
+                "type": "filter_color",
+                "inputs": [
+                    15
+                ],
+                "value_inputs": [
+                    "<C6>"
+                ],
+                "action": false
+            },
+            {
+                "type": "unique",
+                "inputs": [
+                    16
+                ],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "move",
+                "inputs": [
+                    17,
+                    12
+                ],
+                "value_inputs": [
+                    "<A3>"
+                ],
+                "action": true,
+                "distance":1
+            }
+
+        ]
+        }
+]

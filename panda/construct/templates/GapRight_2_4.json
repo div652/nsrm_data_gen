@@ -1,0 +1,161 @@
+[
+    {
+        "template_id": 1,
+        "num_step": 1,
+        "text": {
+            "simple": [
+                "put the <C9> <T9> <A1> the <C8> <T8> and put the <C10> <T10> 3 steps <A2> the <C9> <T9>"
+            ]
+        },
+        "program": [
+            {
+                "action": "<A1>",
+                "inputs": "<O1> <O2>"
+            }
+        ],
+        "constraints": {
+            "actions": ["RIGHT", "LEFT", "TOP"],
+            "action_preference": ["TOP","RIGHT"],
+            "inputs": [
+                1,
+                2
+            ]
+        },
+        "Relations": ["RIGHT", "RIGHT", "RIGHT","TOP","LEFT","LEFT","LEFT"],
+        "num_unique_actions": 9,
+        "num_unique_objects": 7,
+        "numIdenticalToFirst": 3,
+
+        "nodes": [
+
+            {
+                "type": "scene",
+                "inputs": [],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "filter_type",
+                "inputs": [
+                    0
+                ],
+                "value_inputs": [
+                    "<T8>"
+                ],
+                "action": false
+            },
+            {
+                "type": "filter_color",
+                "inputs": [
+                    1
+                ],
+                "value_inputs": [
+                    "<C8>"
+                ],
+                "action": false
+            },
+            {
+                "type": "unique",
+                "inputs": [
+                    2
+                ],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "scene",
+                "inputs": [],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "filter_type",
+                "inputs": [
+                    4
+                ],
+                "value_inputs": [
+                    "<T9>"
+                ],
+                "action": false
+            },
+            {
+                "type": "filter_color",
+                "inputs": [
+                    5
+                ],
+                "value_inputs": [
+                    "<C9>"
+                ],
+                "action": false
+            },
+            {
+                "type": "unique",
+                "inputs": [
+                    6
+                ],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "move",
+                "inputs": [
+                    7,
+                    3
+                ],
+                "value_inputs": [
+                    "<A1>"
+                ],
+                "action": true,
+                "visible" : true
+            },
+            {
+                "type": "scene",
+                "inputs": [],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "filter_type",
+                "inputs": [
+                    9
+                ],
+                "value_inputs": [
+                    "<T10>"
+                ],
+                "action": false
+            },
+            {
+                "type": "filter_color",
+                "inputs": [
+                    10
+                ],
+                "value_inputs": [
+                    "<C10>"
+                ],
+                "action": false
+            },
+            {
+                "type": "unique",
+                "inputs": [
+                    11
+                ],
+                "value_inputs": [],
+                "action": false
+            },
+            {
+                "type": "move",
+                "inputs": [
+                    12,
+                    7
+                ],
+                "value_inputs": [
+                    "<A2>"
+                ],
+                "action": true,
+                "visible" : true,
+                "distance":3
+            }
+
+        ]
+        }
+]

@@ -1,0 +1,63 @@
+{
+    "train_count_downscale": 1,
+    "val_count_downscale": 1000,
+    "test_count_downscale": 10,
+    "categories":[
+        {
+            "type":"any",
+            "num_objects": 10,
+            "steps":0,
+            "relational": false,
+            "language":"simple",
+            "count": 500
+        },
+        {
+            "type":"any",
+            "num_objects": 11,
+            "steps":0,
+            "relational": false,
+            "language":"simple",
+            "count": 500
+        },
+        {
+            "type":"any",
+            "num_objects": 10,
+            "steps":0,
+            "relational": false,
+            "language":"simple",
+            "count": 500
+        },
+        {
+            "type":"any",
+            "num_objects": 10,
+            "steps":1,
+            "relational": false,
+            "language":"simple",
+            "count": 300
+        },
+        {
+            "type":"any",
+            "num_objects": 8,
+            "steps":1,
+            "relational": false,
+            "language":"simple",
+            "count": 300
+        },
+        {
+            "type":"any",
+            "num_objects": 5,
+            "steps":1,
+            "relational": false,
+            "language":"simple",
+            "count": 300
+        },
+        {
+            "type":"any",
+            "num_objects": 9,
+            "steps":1,
+            "relational": false,
+            "language":"simple",
+            "count": 300
+        }
+    ]
+}
