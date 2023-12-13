@@ -183,18 +183,12 @@ CameraViews=  {
 			'cameraYaw': 0,
 			'cameraPitch': -5,
 			'cameraTargetPosition':[0, 0, 0.69],
-			'low': 0.040,
-			'scale': 1.0
-
 	},
     'diag1_45' : {
 			'cameraDistance': 0.565,
 			'cameraYaw': 48,
 			'cameraPitch': -43,
 			'cameraTargetPosition':[0.12, -0.12, 0.66],
-			'low': 0.66,
-			'scale': 3.5
-	
 	},
 
 
@@ -204,8 +198,6 @@ CameraViews=  {
 			'cameraYaw': 0,
 			'cameraPitch': -43,
 			'cameraTargetPosition':[-0.05, 0, 0.66],
-			'low': 0.69,
-			'scale': 4.5
 	},
     
     

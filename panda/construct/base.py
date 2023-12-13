@@ -59,7 +59,7 @@ class ConstructBase(PandaWorld):
 		demo_states = [os.path.join(instance_dir, f) for f in os.listdir(instance_dir)]
 		demo_states = [s for s in demo_states if os.path.isdir(s)]
 		instance_folder = "S" + "{0:0=2d}".format(len(demo_states))
-		projmatrix = self.bullet_client.computeProjectionMatrixFOV(fov=90,aspect=1,nearVal=0.1,farVal=100)
+		projmatrix = self.bullet_client.computeProjectionMatrixFOV(fov=90,aspect=1,nearVal=0.1,farVal=1.40)
 		
 		# filepaths 
 		os.mkdir(os.path.join(instance_dir, instance_folder))
@@ -68,9 +68,6 @@ class ConstructBase(PandaWorld):
 			viewMatrix = self.bullet_client.computeViewMatrixFromYawPitchRoll(viewInfo['cameraTargetPosition'],viewInfo['cameraDistance'],viewInfo['cameraYaw'],viewInfo['cameraPitch'],0.0,2)
 			# viewMatrix = self.bullet_client.computeViewMatrix(cameraEyePosition = [-10,0,5],cameraTargetPosition=[0,0,0],cameraUpVector=[1,0,0])
 			# self.bullet_client.resetDebugVisualizerCamera(**viewInfo)
-			
-			viewDepthLow=viewInfo['low']
-			viewDepthScale=viewInfo['scale']
 
 			for panda_visible in [True, False]:
 				if (not use_panda) and panda_visible:
@@ -79,6 +76,7 @@ class ConstructBase(PandaWorld):
 					self.hide_panda_body()
 				else:
 					self.show_panda_body()
+     
 				_, _, rgba, depth, mask = self.bullet_client.getCameraImage(width = w, height = h, viewMatrix = viewMatrix,projectionMatrix=projmatrix,renderer=self.bullet_client.ER_TINY_RENDERER)
     
 				# _, _, rgba, depth, mask = self.bullet_client.getCameraImage(width = w, height = h)
@@ -91,39 +89,16 @@ class ConstructBase(PandaWorld):
 				depth_filepath = os.path.join(folder,  f"depth.png")
 				mask_filepath = os.path.join(folder, f"mask.png")
 
-				# def depth_color_map(depth):
-				# 	depth = (depth - 0.90)*10*255
-				# 	depth_colormap = cv2.convertScaleAbs(depth)
-				# 	return depth_colormap
-				
 				def depth_color_map(depth):
-					depth = (depth - viewDepthLow)*viewDepthScale*255
-					depth_colormap = cv2.convertScaleAbs(depth)
-					return depth_colormap
-				# def depth_color_map(depth):
-				# 	return (depth*255).astype(np.uint8)
-				# 	return cv2.convertScaleAbs(((10/(100-(99.9*depth)))-0.1)*255.0/99.9)
-     
-				# this is fitted for diag_45
-				# def depth_color_map(depth):
-				# 	depth = (depth-0.66)*3.5*255
-				# 	depth_colormap = cv2.convertScaleAbs(depth)
-				# 	return depth_colormap
-				# def depth_color_map(depth):
-				# 	depth = depth*255
-				# 	depth_colormap=cv2.convertScaleAbs(depth)
-				# 	return depth_colormap
-				# print("---------------------------")
-				# print(depth)
-				# print("---------------------------")
-				# Get ColorMaps
+					# print(depth[400:420,400:420])
+					depth = ((0.140)/(1.40-(1.30)*depth))
+					depth = ((depth-0.1)/1.30)*255
+					return cv2.convertScaleAbs(depth)
+					
 				mask[mask < 3] = 0
 				mask = cv2.convertScaleAbs(mask)
 				depth = depth_color_map(depth)
-				# print(depth)
-				# print("----------------------------")
-
-
+    
 				# print(np.unique(mask))
 				# Save Images
 				Image.fromarray(rgba, 'RGBA').save(img_filepath)

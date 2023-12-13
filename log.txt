@@ -1,94 +1,132 @@
 num identical are 0
 Trying a valid position again
-0 0 [array([0.01198954, 0.35098605, 0.65      ])] 1
-7
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-1 0 [array([0.01198954, 0.35098605, 0.65      ]), array([0.01198954, 0.43098605, 0.65      ])] 1
-7
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-notVisible
-Trying a valid position again
-0 0 [array([-0.42640145,  0.06485223,  0.65      ])] 1
-7
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-1 0 [array([-0.42640145,  0.06485223,  0.65      ]), array([-0.42640145,  0.14485223,  0.65      ])] 1
-7
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-4
-checking non overlapping for  [array([-0.42640145,  0.06485223,  0.65      ]), array([-0.42640145,  0.14485223,  0.65      ]), array([-0.42640145,  0.22485223,  0.65      ]), array([0.58500058, 0.24916979, 0.65      ]), array([0.08973289, 0.06741268, 0.65      ]), array([-0.26883088,  0.36806474,  0.65      ]), array([-0.27366624,  0.31996418,  0.65      ])]
-got false,  5 6
+0 0 [array([0.15491478, 0.28275485, 0.65      ])] 1
+11
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 0
+Added block
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 0
+10
+checking non overlapping for  [array([0.15491478, 0.28275485, 0.65      ]), [0.23491477530812593, 0.2827548511556212, 0.65], array([ 0.55290179, -0.0217622 ,  0.65      ]), array([ 0.31309365, -0.01964223,  0.65      ]), array([ 0.48616968, -0.02133787,  0.65      ]), array([ 0.20658515, -0.11909559,  0.65      ]), array([-0.17790859, -0.05106487,  0.65      ]), array([0.10381814, 0.11667368, 0.65      ]), array([-0.01181281,  0.25655456,  0.65      ]), array([-0.47108995, -0.07086309,  0.65      ]), array([ 0.04111706, -0.24004326,  0.65      ]), array([-0.25049519,  0.3325161 ,  0.65      ])]
+got false,  2 4
 found  False
 Trying a valid position again
-0 0 [array([ 0.02129864, -0.23718362,  0.65      ])] 1
-7
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-1 0 [array([ 0.02129864, -0.23718362,  0.65      ]), array([ 0.02129864, -0.15718362,  0.65      ])] 1
-7
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-4
-checking non overlapping for  [array([ 0.02129864, -0.23718362,  0.65      ]), array([ 0.02129864, -0.15718362,  0.65      ]), array([ 0.02129864, -0.07718362,  0.65      ]), array([-0.60857126, -0.01250844,  0.65      ]), array([-0.53666169,  0.19200949,  0.65      ]), array([ 0.44975854, -0.07607761,  0.65      ]), array([ 0.37985637, -0.09751474,  0.65      ])]
-got false,  5 6
+0 0 [array([-0.1830565 ,  0.20911155,  0.65      ])] 1
+11
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 0
+Added block
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 0
+10
+checking non overlapping for  [array([-0.1830565 ,  0.20911155,  0.65      ]), [-0.10305650132392254, 0.20911155023044886, 0.65], array([ 0.1023766 , -0.08075533,  0.65      ]), array([-0.03985736, -0.2719426 ,  0.65      ]), array([-0.01602529,  0.21726813,  0.65      ]), array([0.26189072, 0.28163486, 0.65      ]), array([ 0.05148648, -0.19628796,  0.65      ]), array([-0.0500572 ,  0.25344732,  0.65      ]), array([0.07226749, 0.39635952, 0.65      ]), array([-0.03532697, -0.24955082,  0.65      ]), array([-0.34270605,  0.20472826,  0.65      ]), array([-0.15210303,  0.22906566,  0.65      ])]
+got false,  0 11
 found  False
 Trying a valid position again
-0 0 [array([0.02647074, 0.20037989, 0.65      ])] 1
-7
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-1 0 [array([0.02647074, 0.20037989, 0.65      ]), array([0.02647074, 0.28037989, 0.65      ])] 1
-7
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-4
-checking non overlapping for  [array([0.02647074, 0.20037989, 0.65      ]), array([0.02647074, 0.28037989, 0.65      ]), array([0.02647074, 0.36037989, 0.65      ]), array([0.06828818, 0.25150551, 0.65      ]), array([-0.23703255, -0.00072159,  0.65      ]), array([-0.05090514,  0.38686855,  0.65      ]), array([-0.02076631, -0.08878161,  0.65      ])]
-got false,  0 3
+0 0 [array([-1.91797301e-04, -2.90754444e-01,  6.50000000e-01])] 1
+11
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 0
+Added block
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 0
+Trying a valid position again
+0 0 [array([-4.23261394e-01,  5.22952966e-04,  6.50000000e-01])] 1
+11
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 0
+Added block
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 0
+10
+checking non overlapping for  [array([-4.23261394e-01,  5.22952966e-04,  6.50000000e-01]), [-0.3432613941408558, 0.0005229529659221965, 0.65], array([-0.36364618,  0.04172929,  0.65      ]), array([ 0.0083399 , -0.05426065,  0.65      ]), array([-0.43683699,  0.15506849,  0.65      ]), array([0.3851147 , 0.32659949, 0.65      ]), array([-0.37538169, -0.12268203,  0.65      ]), array([-0.00204899, -0.28961049,  0.65      ]), array([ 0.08658455, -0.14610244,  0.65      ]), array([ 0.01477629, -0.27596067,  0.65      ]), array([ 2.39159184e-04, -2.85045060e-01,  6.50000000e-01]), array([ 0.31138643, -0.03516258,  0.65      ])]
+got false,  0 2
 found  False
 Trying a valid position again
-0 0 [array([ 0.30407685, -0.00188546,  0.65      ])] 1
-7
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-1 0 [array([ 0.30407685, -0.00188546,  0.65      ]), array([0.30407685, 0.07811454, 0.65      ])] 1
-7
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-4
-checking non overlapping for  [array([ 0.30407685, -0.00188546,  0.65      ]), array([0.30407685, 0.07811454, 0.65      ]), array([0.30407685, 0.15811454, 0.65      ]), array([0.52298098, 0.31752332, 0.65      ]), array([ 0.0014645 , -0.29307299,  0.65      ]), array([-0.19140642, -0.17681121,  0.65      ]), array([ 1.24264840e-04, -2.91436317e-01,  6.50000000e-01])]
-got false,  4 6
+0 0 [array([-0.0811878 , -0.12974331,  0.65      ])] 1
+11
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 0
+Added block
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 0
+10
+checking non overlapping for  [array([-0.0811878 , -0.12974331,  0.65      ]), [-0.0011877960507664792, -0.12974331216738688, 0.65], array([-0.16055153, -0.14360865,  0.65      ]), array([ 0.1177527 , -0.20323936,  0.65      ]), array([-0.29699257, -0.00100964,  0.65      ]), array([0.51853413, 0.25919459, 0.65      ]), array([ 0.14093772, -0.18117748,  0.65      ]), array([0.02775855, 0.24364314, 0.65      ]), array([-0.28505612,  0.21006035,  0.65      ]), array([ 0.31641043, -0.12944995,  0.65      ]), array([0.12635372, 0.3690013 , 0.65      ]), array([-0.51444905, -0.0328535 ,  0.65      ])]
+got false,  3 6
 found  False
 Trying a valid position again
-0 0 [array([0.39905567, 0.13241176, 0.65      ])] 1
-7
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-1 0 [array([0.39905567, 0.13241176, 0.65      ]), array([0.39905567, 0.21241176, 0.65      ])] 1
-7
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 0
-4
-checking non overlapping for  [array([0.39905567, 0.13241176, 0.65      ]), array([0.39905567, 0.21241176, 0.65      ]), array([0.39905567, 0.29241176, 0.65      ]), array([-0.55644903,  0.27404264,  0.65      ]), array([0.17682309, 0.15746468, 0.65      ]), array([-0.23040856, -0.14353866,  0.65      ]), array([0.19450455, 0.23441454, 0.65      ])]
+0 0 [array([0.21694648, 0.13134731, 0.65      ])] 1
+11
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 0
+Added block
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 0
+10
+checking non overlapping for  [array([0.21694648, 0.13134731, 0.65      ]), [0.296946480133972, 0.1313473052214022, 0.65], array([-4.25546123e-04, -2.82696688e-01,  6.50000000e-01]), array([0.40497547, 0.25474265, 0.65      ]), array([0.54471438, 0.00102571, 0.65      ]), array([-0.19303631, -0.13140735,  0.65      ]), array([-0.30650226, -0.05068374,  0.65      ]), array([-0.46164043,  0.39586488,  0.65      ]), array([-0.02111684,  0.09030314,  0.65      ]), array([ 0.25682552, -0.10196146,  0.65      ]), array([-0.04710418,  0.39790174,  0.65      ]), array([0.46346013, 0.34556857, 0.65      ])]
 found  True
-The positions that are being returned are  [array([0.39905567, 0.13241176, 0.65      ]), array([0.39905567, 0.21241176, 0.65      ]), array([0.39905567, 0.29241176, 0.65      ]), array([-0.55644903,  0.27404264,  0.65      ]), array([0.17682309, 0.15746468, 0.65      ]), array([-0.23040856, -0.14353866,  0.65      ]), array([0.19450455, 0.23441454, 0.65      ])]
+The positions that are being returned are  [array([0.21694648, 0.13134731, 0.65      ]), array([-4.25546123e-04, -2.82696688e-01,  6.50000000e-01]), array([0.40497547, 0.25474265, 0.65      ]), array([0.54471438, 0.00102571, 0.65      ]), array([-0.19303631, -0.13140735,  0.65      ]), array([-0.30650226, -0.05068374,  0.65      ]), array([-0.46164043,  0.39586488,  0.65      ]), array([-0.02111684,  0.09030314,  0.65      ]), array([ 0.25682552, -0.10196146,  0.65      ]), array([-0.04710418,  0.39790174,  0.65      ]), array([0.46346013, 0.34556857, 0.65      ])]
 checking action compatibabilty
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 3
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 3
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 1
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 1
 returning True Compatibbality
 checking action compatibabilty
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 4
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 4
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 2
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 2
+returning True Compatibbality
+checking action compatibabilty
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 3
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 3
+returning True Compatibbality
+checking action compatibabilty
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 4
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 4
+returning True Compatibbality
+checking action compatibabilty
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 5
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 5
+returning True Compatibbality
+checking action compatibabilty
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 6
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 6
+returning True Compatibbality
+checking action compatibabilty
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 7
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 7
 returning True Compatibbality
 obtained status  True
 checking action compatibabilty
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 3
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 3
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 4
-In obect dimensions ['Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Dice', 'Cube'] 4
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 1
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 1
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 2
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 2
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 3
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 3
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 4
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 4
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 5
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 5
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 6
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 6
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 7
+In obect dimensions ['Cube', 'Dice', 'Cube', 'Cube', 'Cube', 'Dice', 'Dice', 'Dice', 'Cube', 'Dice', 'Cube'] 7
 returning True Compatibbality
-Trying to apply progam  [('TOP', 3, 2, 1, True), ('BACK', 4, 3, 2, True)]
-Saving position info for  0 ('TOP', 3, 2, 1, True)
-Saving position info for  1 ('BACK', 4, 3, 2, True)
+Trying to apply progam  [('RIGHT', 1, 0, 1, True), ('TOP', 2, 1, 1, True), ('LEFT', 3, 2, 1, True), ('TOP', 4, 3, 1, True), ('RIGHT', 5, 4, 1, True), ('TOP', 6, 5, 1, True), ('LEFT', 7, 6, 1, True)]
+Saving position info for  0 ('RIGHT', 1, 0, 1, True)
+Saving position info for  1 ('TOP', 2, 1, 1, True)
+Saving position info for  2 ('LEFT', 3, 2, 1, True)
+Saving position info for  3 ('TOP', 4, 3, 1, True)
+Saving position info for  4 ('RIGHT', 5, 4, 1, True)
+Saving position info for  5 ('TOP', 6, 5, 1, True)
+Saving position info for  6 ('LEFT', 7, 6, 1, True)
+num identical are 0
+Trying a valid position again
+0 0 [array([-0.30858789, -0.12117588,  0.65      ])] 2
+4
+In obect dimensions ['Cube', 'Cube', 'Cube', 'Dice'] 0
+Added block
+In obect dimensions ['Cube', 'Cube', 'Cube', 'Dice'] 0
+3
+checking non overlapping for  [array([-0.30858789, -0.12117588,  0.65      ]), [-0.1485878870399038, -0.1211758774347298, 0.65], array([0.31787376, 0.24918949, 0.65      ]), array([-0.2024928,  0.3525834,  0.65     ]), array([-0.04885243,  0.30389172,  0.65      ])]
+found  True
+The positions that are being returned are  [array([-0.30858789, -0.12117588,  0.65      ]), array([0.31787376, 0.24918949, 0.65      ]), array([-0.2024928,  0.3525834,  0.65     ]), array([-0.04885243,  0.30389172,  0.65      ])]
+checking action compatibabilty
+In obect dimensions ['Cube', 'Cube', 'Cube', 'Dice'] 1
+In obect dimensions ['Cube', 'Cube', 'Cube', 'Dice'] 1
+returning True Compatibbality
+obtained status  True
+checking action compatibabilty
+In obect dimensions ['Cube', 'Cube', 'Cube', 'Dice'] 1
+In obect dimensions ['Cube', 'Cube', 'Cube', 'Dice'] 1
+returning True Compatibbality
+Trying to apply progam  [('RIGHT', 1, 0, 2, True)]
+Saving position info for  0 ('RIGHT', 1, 0, 2, True)
