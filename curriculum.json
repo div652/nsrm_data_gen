@@ -13,8 +13,8 @@
         },
         {
             "type":"cube",
-            "num_objects": 6,
-            "steps":59,
+            "num_objects": 7,
+            "steps":50,
             "relational": false,
             "language":"simple",
             "count": 1

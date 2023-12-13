@@ -138,7 +138,6 @@ class DataConstructor(object):
       # construct.hide_panda_body()
 
       construct.save_instance() #save the initial scene
-      exit()
       status = construct.generate_grounded_functional_program(object_choice = self.config.get('instantiation_type', 'random'), MAX_ATEMPTS = self.config.get('max_program_generation_atempts',100))
       if status == False:  # if no compatible program found, remove the sample 
         remove_sample(smpl_dir)
