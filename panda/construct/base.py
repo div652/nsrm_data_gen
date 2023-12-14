@@ -147,7 +147,6 @@ class ConstructBase(PandaWorld):
 				continue
 			move_object = action[1]
 			self.move_object(move_object, self.target_position[idx])
-			print("Saving position info for " , idx,action)
 			self.save_position_info()
 			# action[4] stores whether the scenes must be stored or not. By default is True, can turn it off by setting "show" : false in nodes in templates 
 			if(action[4]):
@@ -223,7 +222,7 @@ class ConstructBase(PandaWorld):
 
 
 	def check_action_compatibility(self, program, block_positions: list):
-		print("checking action compatibabilty")
+		# print("checking action compatibabilty")
 		import copy
 		target_positions = list()
 		block_positions_cur = copy.deepcopy(block_positions)
@@ -258,8 +257,8 @@ class ConstructBase(PandaWorld):
 					block_positions_cur[move_object_idx] = tr_pos
 				else:
 					print("Shift position not empty")
-					print("Target position is ",tr_pos)
-					print("block_positions right now are ",block_positions) 
+					# print("Target position is ",tr_pos)
+					# print("block_positions right now are ",block_positions) 
 					# self.save_instance()
 					return None
 			elif action == 'RIGHT':
@@ -293,6 +292,6 @@ class ConstructBase(PandaWorld):
 			else:
 				print(f"No Implementation for action_compatible:{action[0]} in N_SameAction")
 				raise NotImplementedError()
-		print("returning True Compatibbality" )
+		# print("returning True Compatibbality" )
 		return target_positions
 

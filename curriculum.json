@@ -9,63 +9,7 @@
             "steps":0,
             "relational": false,
             "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":0,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":0,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":0,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":0,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":0,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":0,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":0,
-            "relational": false,
-            "language":"simple",
-            "count": 0
+            "count": 2000
         },
         {
             "type":"cube",
@@ -73,63 +17,7 @@
             "steps":8,
             "relational": false,
             "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":8,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":8,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":8,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":8,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":8,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":8,
-            "relational": false,
-            "language":"simple",
-            "count": 1
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":8,
-            "relational": false,
-            "language":"simple",
-            "count": 0
+            "count": 2000
         },
         {
             "type":"cube",
@@ -137,63 +25,7 @@
             "steps":9,
             "relational": false,
             "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":9,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":9,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":9,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":9,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":9,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":9,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":9,
-            "relational": false,
-            "language":"simple",
-            "count": 0
+            "count": 2000
         },
         {
             "type":"cube",
@@ -201,63 +33,7 @@
             "steps":10,
             "relational": false,
             "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":10,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":10,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":10,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":10,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":10,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":10,
-            "relational": false,
-            "language":"simple",
-            "count": 0
-        },
-        {
-            "type":"cube",
-            "num_objects": 11,
-            "steps":10,
-            "relational": false,
-            "language":"simple",
-            "count": 0
+            "count": 2000
         },
         {
             "type":"cube",
@@ -425,7 +201,7 @@
             "steps":23,
             "relational": false,
             "language":"simple",
-            "count": 1
+            "count": 0
         },
         {
             "type":"cube",

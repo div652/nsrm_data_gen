@@ -89,7 +89,6 @@ class ProgramGenerator(ProgramExecutor):
             random.shuffle(self.object_type)
             
             self.numIdenticalToFirst = self.template['numIdenticalToFirst'] if 'numIdenticalToFirst' in self.template else 0
-            print("num identical are",self.numIdenticalToFirst)
             clearNums = self.template['clearNums'] if 'clearNums' in self.template else 0
             clearDirection = self.template['clearDirection'] if 'clearDirection' in self.template else None
             block_positions = self.get_block_positions(num_movable_objects+self.numIdenticalToFirst)

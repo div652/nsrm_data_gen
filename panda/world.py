@@ -159,8 +159,8 @@ class PandaWorld(object):
 			# 'DIAG_315' : self.diag_315_target_pos,
 		}
 		handler = handlers[relation]
-		print(base_obj_id, move_obj_id, all_block_positions,distance)
-		print(len(self.object_type))
+		# print(base_obj_id, move_obj_id, all_block_positions,distance)
+		# print(len(self.object_type))
 		return handler(base_obj_id, move_obj_id, all_block_positions,distance)
 
 	## -------------------------------------------------------------------------
@@ -209,21 +209,21 @@ class PandaWorld(object):
 		return self.offset + np.array([var_xy[0], var_xy[1], TABLE_OFFSET])
 		
 	def check_blocks_not_overlapping(self, block_positions, margin = 0.075,numSkips=0):
-		print("checking non overlapping for ",block_positions)
+		# print("checking non overlapping for ",block_positions)
 		num_blocks = len(block_positions)
 		
 		for i in range(numSkips):
 			for j in range(numSkips,num_blocks):
 				x, y, _ = block_positions[i]-block_positions[j]
 				max_d = max(abs(x), abs(y))
-				if max_d < margin: print("got false, ",i,j)
+				# if max_d < margin: print("got false, ",i,j)
 				if max_d < margin: return False
        
 		for i in range(numSkips,num_blocks):
 			for j in range(i + 1, num_blocks):
 				x, y, _ = block_positions[i]-block_positions[j]
 				max_d = max(abs(x), abs(y))
-				if max_d < margin: print("got false, ",i,j)
+				# if max_d < margin: print("got false, ",i,j)
 				if max_d < margin: return False
 		return True
 
@@ -244,7 +244,7 @@ class PandaWorld(object):
 		
 		valid, block_positions = False, None
 		while(not(valid)):
-			print("Trying a valid position again")
+			# print("Trying a valid position again")
 			block_positions=[]
 			notVisible=False
 			firstBlockPosition = self.get_random_table_position()
@@ -258,7 +258,7 @@ class PandaWorld(object):
 				pseduoBlocks=1
 				keepPos = self.relative_target_pos(self.template['checkOnTable'][0],0,0,block_positions,self.template['checkOnTable'][1])
     
-				print("Added block")
+				# print("Added block")
 				if(not(self.on_table(keepPos,object_id=0)) or not(self.in_camera_view(keepPos,object_id=0))):
 					continue
 				else:
@@ -278,17 +278,17 @@ class PandaWorld(object):
 			
 			# using object_id =0 as for now the ghost blocks are assumed to be identical to the first block in shape and color 
 			if(notVisible):
-				print("notVisible")
+				# print("notVisible")
 				continue
-			print(num_blocks-nums-1)
+			# print(num_blocks-nums-1)
 
 			otherBlocks = [self.get_random_table_position() for _ in range(num_blocks-nums-1)]
 			block_positions.extend(otherBlocks)
 			valid = self.check_blocks_not_overlapping(block_positions,numSkips=nums+1+pseduoBlocks) 
-			print("found ",valid)
+			# print("found ",valid)
 		# we don't send pseduo blocks in outout
 		block_positions = block_positions[:1]+block_positions[pseduoBlocks+1:]
-		print("The positions that are being returned are ",block_positions)
+		# print("The positions that are being returned are ",block_positions)
 		return block_positions
 	
 	# -------------------------------------------------------------------------
@@ -301,7 +301,7 @@ class PandaWorld(object):
 			object_target_id: The id of the object in the pandaworld. Note that this not the object id w.r.t bullet client
 		Return:(float) The object size. Currently, we are having cubes only. So a single number is enough.  
 		'''
-		print("In obect dimensions",self.object_type,object_target_id)
+		# print("In obect dimensions",self.object_type,object_target_id)
 		obj_type = self.object_type[object_target_id]
 		if obj_type in object_dimensions.keys():
 			return object_dimensions[obj_type]

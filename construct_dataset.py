@@ -7,6 +7,8 @@ import subprocess
 import tempfile
 import json
 
+CHUNK_SIZE= 50
+
 template_file = {
     (1, False): "SingleStep.json",
     (1, True): "RelationalSingleStep.json",
@@ -76,17 +78,27 @@ with open('curriculum.json', 'r') as f:
     data = json.load(f)
 processes = []
 
+
 for dataset in ['train','val','test']:
     count_downscale = data[dataset + '_count_downscale']
-
+    dirnum = 0  
     for c, category in enumerate(data['categories']):
-        f = tempfile.TemporaryFile()
-        dir_name = 'tmp_' + dataset + "-" + str(c)
-        num_examples = category['count'] // count_downscale
-        command = f'python3 construct.py --template_file {os.path.join(template_file_prefix, template_file[(category["steps"], category["relational"])])} --metadata_file {metadata_file} --dataset_dir {dir_name} --type {category["type"]} --max_objects {category["num_objects"]} --language {category["language"]} --num_examples {num_examples}'
-        print(command)
-        p = subprocess.Popen(command.split(), stdout=f)
-        processes.append((p,f))
+        total_num_examples = category['count']
+        batches = ((total_num_examples-1)//CHUNK_SIZE)+1
+        for i in range(batches):
+            num_examples = 0 
+            if(i<batches-1):
+                num_examples = CHUNK_SIZE
+            else : 
+                num_examples = ((category['count']-1)%CHUNK_SIZE)+1
+            num_examples = num_examples // count_downscale
+            f = tempfile.TemporaryFile()
+            dir_name = 'tmp_' + dataset + "-" + str(dirnum)
+            dirnum+=1
+            command = f'python3 construct.py --template_file {os.path.join(template_file_prefix, template_file[(category["steps"], category["relational"])])} --metadata_file {metadata_file} --dataset_dir {dir_name} --type {category["type"]} --max_objects {category["num_objects"]} --language {category["language"]} --num_examples {num_examples}'
+            print(command)
+            p = subprocess.Popen(command.split(), stdout=f)
+            processes.append((p,f))
 
 logfile = open('log.txt', 'wb')
 
