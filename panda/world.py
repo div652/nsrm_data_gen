@@ -202,7 +202,7 @@ class PandaWorld(object):
 		else: 
 			breadth = WORK_AREA_BREADTH*(1 - alpha*y/(up_limit))
 		left_limit = -0.5* breadth
-		right_limit = 0.5* breadth
+		right_limit = 0.3* breadth
 		x = np.random.uniform(left_limit, right_limit)
 		var_xy = [x,y]
 		# var_xy = WORK_AREA_SIDE*(np.random.rand(2) + np.array([-0.5, -0.5]))
