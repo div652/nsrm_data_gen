@@ -9,7 +9,7 @@
             "steps":0,
             "relational": false,
             "language":"simple",
-            "count": 1000
+            "count": 3
         },
         {
             "type":"cube",
@@ -17,7 +17,7 @@
             "steps":8,
             "relational": false,
             "language":"simple",
-            "count": 1000
+            "count": 3
         },
         {
             "type":"cube",
@@ -25,7 +25,7 @@
             "steps":9,
             "relational": false,
             "language":"simple",
-            "count": 1000
+            "count": 3
         },
         {
             "type":"cube",
@@ -33,7 +33,7 @@
             "steps":10,
             "relational": false,
             "language":"simple",
-            "count": 1000
+            "count": 3
         },
         {
             "type":"cube",

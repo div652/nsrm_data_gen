@@ -41,9 +41,13 @@ def get_bbox(image_mask_path, image_depth_path, bbox_mode = 'yxhw'):
 
                 #Normalize bbox
                 bbox = [np.min(py)/h, np.min(px)/w, (np.max(py) - np.min(py))/h, (np.max(px) - np.min(px))/w]
+                this_depths = [depth[y,x] for (x,y) in zip(px,py)]
+                depth_min = min(this_depths)/255
+                depth_max = max(this_depths)/255
+                
             else:
                 raise NotImplementedError      
-            bboxes_info[id.item()][scene_id] = list(map(float, bbox + [depth_center]))
+            bboxes_info[id.item()][scene_id] = list(map(float, bbox + [depth_center,depth_min,depth_max]))
 
     total_objs = sorted(list(bboxes_info.keys()))
     total_scenes = len(masks)
@@ -97,7 +101,8 @@ def get_scene_info(images_dir, demo_json_path, demonstration_id, scene_no, split
         object['3d_coords'] = demo_json['object_positions'][scene_no][i]
         object['color'] = obj['color'][1]
         object['type'] = obj['type']
-        object['bbox'] = bboxes[i]
+        object['bbox'] = {key: value[:-2] for key, value in bboxes[i].items()}
+        object['depths'] = {key: value[-3:] for key, value in bboxes[i].items()}
         # object['pixel_coords'] = [(bboxes[i][0]+bboxes[i][2])/2, (bboxes[i][1]+bboxes[i][3])/2, bboxes[i][4]]
         object['rotation'] = obj['rotation']
         scene['objects'].append(object)
