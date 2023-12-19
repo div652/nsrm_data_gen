@@ -186,17 +186,11 @@ CameraViews=  {
 			'cameraTargetPosition':[0, 0, 0.69],
 	},
     # this is the original one that has been used trhoughotut sem7
-    # 'diag1_45' : {
-	# 		'cameraDistance': 0.565,
-	# 		'cameraYaw': 48,
-	# 		'cameraPitch': -43,
-	# 		'cameraTargetPosition':[0.12, -0.12, 0.66],
-	# },
-	'diag1_45' : {
+    'diag1_45' : {
 			'cameraDistance': 0.565,
 			'cameraYaw': 48,
 			'cameraPitch': -43,
-			'cameraTargetPosition':[0.0, -0.0, 0.66],
+			'cameraTargetPosition':[0.12, -0.12, 0.66],
 	},
 
 	# 'diag1_45' : {

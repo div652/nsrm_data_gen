@@ -35,7 +35,7 @@ RELEASE_WIDTH = 0.05
 GRASP_HEIGHT = 0.10
 ALPHA = 0.99
 DROP_MARGIN = 0.001
-
+SLOPE = 0.5
 TIME_STEP = [1.25, 2.0, 1.5, 0.5, 1.5, 2.0, 1.5, 0.5, 1.5]
 
 
@@ -185,7 +185,7 @@ class PandaWorld(object):
 		center_x=position[0]
 		center_y=position[1]
 		up_limit = -0.4*WORK_AREA_LENGTH
-		alpha = 1.1
+		alpha = SLOPE
 		if(center_y>0):
 			return True 
 		else : 
@@ -196,7 +196,7 @@ class PandaWorld(object):
 		up_limit = -0.4*WORK_AREA_LENGTH
 		down_limit = 0.5*WORK_AREA_LENGTH
 		y = np.random.uniform(down_limit,up_limit)
-		alpha = 1.1
+		alpha = SLOPE
 		if(y>=0.0):
 			breadth = WORK_AREA_BREADTH 
 		else: 

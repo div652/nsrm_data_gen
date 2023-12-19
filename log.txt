@@ -1,24 +1,8 @@
 obtained status  True
 Trying to apply progam  [('LEFT', 1, 0, 1, True), ('TOP', 2, 1, 1, True), ('RIGHT', 3, 2, 1, True), ('TOP', 4, 3, 1, True), ('LEFT', 5, 4, 1, True), ('TOP', 6, 5, 1, True), ('RIGHT', 7, 6, 1, True)]
 obtained status  True
-Trying to apply progam  [('LEFT', 1, 0, 1, True), ('TOP', 2, 1, 1, True), ('RIGHT', 3, 2, 1, True), ('TOP', 4, 3, 1, True), ('LEFT', 5, 4, 1, True), ('TOP', 6, 5, 1, True), ('RIGHT', 7, 6, 1, True)]
-obtained status  True
-Trying to apply progam  [('LEFT', 1, 0, 1, True), ('TOP', 2, 1, 1, True), ('RIGHT', 3, 2, 1, True), ('TOP', 4, 3, 1, True), ('LEFT', 5, 4, 1, True), ('TOP', 6, 5, 1, True), ('RIGHT', 7, 6, 1, True)]
-obtained status  True
-Trying to apply progam  [('RIGHT', 1, 0, 1, True), ('TOP', 2, 1, 1, True), ('LEFT', 3, 2, 1, True), ('TOP', 4, 3, 1, True), ('RIGHT', 5, 4, 1, True), ('TOP', 6, 5, 1, True), ('LEFT', 7, 6, 1, True)]
-obtained status  True
-Trying to apply progam  [('RIGHT', 1, 0, 1, True), ('TOP', 2, 1, 1, True), ('LEFT', 3, 2, 1, True), ('TOP', 4, 3, 1, True), ('RIGHT', 5, 4, 1, True), ('TOP', 6, 5, 1, True), ('LEFT', 7, 6, 1, True)]
-obtained status  True
 Trying to apply progam  [('RIGHT', 1, 0, 1, True), ('TOP', 2, 1, 1, True), ('LEFT', 3, 2, 1, True), ('TOP', 4, 3, 1, True), ('RIGHT', 5, 4, 1, True), ('TOP', 6, 5, 1, True), ('LEFT', 7, 6, 1, True)]
 obtained status  True
 Trying to apply progam  [('FRONT', 1, 0, 1, True), ('TOP', 2, 1, 1, True), ('BACK', 3, 2, 1, True), ('TOP', 4, 3, 1, True), ('FRONT', 5, 4, 1, True), ('TOP', 6, 5, 1, True), ('BACK', 7, 6, 1, True)]
-obtained status  True
-Trying to apply progam  [('FRONT', 1, 0, 1, True), ('TOP', 2, 1, 1, True), ('BACK', 3, 2, 1, True), ('TOP', 4, 3, 1, True), ('FRONT', 5, 4, 1, True), ('TOP', 6, 5, 1, True), ('BACK', 7, 6, 1, True)]
-obtained status  True
-Trying to apply progam  [('FRONT', 1, 0, 1, True), ('TOP', 2, 1, 1, True), ('BACK', 3, 2, 1, True), ('TOP', 4, 3, 1, True), ('FRONT', 5, 4, 1, True), ('TOP', 6, 5, 1, True), ('BACK', 7, 6, 1, True)]
-obtained status  True
-Trying to apply progam  [('BACK', 1, 0, 1, True), ('TOP', 2, 1, 1, True), ('FRONT', 3, 2, 1, True), ('TOP', 4, 3, 1, True), ('BACK', 5, 4, 1, True), ('TOP', 6, 5, 1, True), ('FRONT', 7, 6, 1, True)]
-obtained status  True
-Trying to apply progam  [('BACK', 1, 0, 1, True), ('TOP', 2, 1, 1, True), ('FRONT', 3, 2, 1, True), ('TOP', 4, 3, 1, True), ('BACK', 5, 4, 1, True), ('TOP', 6, 5, 1, True), ('FRONT', 7, 6, 1, True)]
 obtained status  True
 Trying to apply progam  [('BACK', 1, 0, 1, True), ('TOP', 2, 1, 1, True), ('FRONT', 3, 2, 1, True), ('TOP', 4, 3, 1, True), ('BACK', 5, 4, 1, True), ('TOP', 6, 5, 1, True), ('FRONT', 7, 6, 1, True)]
