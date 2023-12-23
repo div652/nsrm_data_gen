@@ -1,5 +1,5 @@
 
-python3 construct_dataset.py
+# python3 construct_dataset.py
  
 python3 move_files.py --root_dir .
  
