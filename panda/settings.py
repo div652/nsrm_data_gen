@@ -46,7 +46,6 @@ class Color(Enum):
 	White = 6
 
 class Objects(Enum):
-	# Block = "./urdf/cuboid/cuboid.urdf"
 	Block = "cube_small.urdf"
 	Tray = "tray/tray.urdf"
 	Lego = "lego/lego.urdf"
@@ -163,7 +162,7 @@ camera_settings = {
 	},
 }
 
-## Camera Views is also a dictionary like CameraSeettings, made by Div, can be integrated later on 
+## Camera Views, also a dictionary like CameraSettings. Only
 CameraViews=  {
 		# 'top' : {
 		# 		'cameraDistance': 0.6,

@@ -159,8 +159,6 @@ class PandaWorld(object):
 			# 'DIAG_315' : self.diag_315_target_pos,
 		}
 		handler = handlers[relation]
-		# print(base_obj_id, move_obj_id, all_block_positions,distance)
-		# print(len(self.object_type))
 		return handler(base_obj_id, move_obj_id, all_block_positions,distance)
 
 	## -------------------------------------------------------------------------
@@ -202,7 +200,8 @@ class PandaWorld(object):
 		else: 
 			breadth = WORK_AREA_BREADTH*(1 - alpha*y/(up_limit))
 		left_limit = -0.5* breadth
-		right_limit = 0.3* breadth
+		right_limit = 0.5* breadth
+		# right_limit = 0.3* breadth
 		x = np.random.uniform(left_limit, right_limit)
 		var_xy = [x,y]
 		# var_xy = WORK_AREA_SIDE*(np.random.rand(2) + np.array([-0.5, -0.5]))
@@ -227,16 +226,6 @@ class PandaWorld(object):
 				if max_d < margin: return False
 		return True
 
-
-	# def get_block_positions(self, num_blocks,direction,nums):
-	# 	'''
-	# 	Return a list of random non-overlaping positions on the table. The positions are 3-D co-ordinates with reference to the bullet client. 
-	# 	'''
-	# 	valid, block_positions = False, None
-	# 	while not valid:
-	# 		block_positions = [self.get_random_table_position() for _ in range(num_blocks)]
-	# 		valid = self.check_blocks_not_overlapping(block_positions) 
-	# 	return block_positions
 	def get_block_positions(self, num_blocks):
 		'''
 		Return a list of random non-overlaping positions on the table. The positions are 3-D co-ordinates with reference to the bullet client. 
@@ -251,6 +240,7 @@ class PandaWorld(object):
 			block_positions.append(firstBlockPosition)
 			pseduoBlocks=0
 			if 'checkOnTable' in self.template:
+       
 				# # for now we are assuming that check on table would only be utilised when there are no relations present. 
 				# if('Relations' in self.template):
 				# 	assert(len(self.template['Relations'])==0)
@@ -258,7 +248,6 @@ class PandaWorld(object):
 				pseduoBlocks=1
 				keepPos = self.relative_target_pos(self.template['checkOnTable'][0],0,0,block_positions,self.template['checkOnTable'][1])
     
-				# print("Added block")
 				if(not(self.on_table(keepPos,object_id=0)) or not(self.in_camera_view(keepPos,object_id=0))):
 					continue
 				else:
@@ -278,17 +267,14 @@ class PandaWorld(object):
 			
 			# using object_id =0 as for now the ghost blocks are assumed to be identical to the first block in shape and color 
 			if(notVisible):
-				# print("notVisible")
 				continue
-			# print(num_blocks-nums-1)
 
 			otherBlocks = [self.get_random_table_position() for _ in range(num_blocks-nums-1)]
 			block_positions.extend(otherBlocks)
 			valid = self.check_blocks_not_overlapping(block_positions,numSkips=nums+1+pseduoBlocks) 
-			# print("found ",valid)
+   
 		# we don't send pseduo blocks in outout
 		block_positions = block_positions[:1]+block_positions[pseduoBlocks+1:]
-		# print("The positions that are being returned are ",block_positions)
 		return block_positions
 	
 	# -------------------------------------------------------------------------
@@ -301,7 +287,6 @@ class PandaWorld(object):
 			object_target_id: The id of the object in the pandaworld. Note that this not the object id w.r.t bullet client
 		Return:(float) The object size. Currently, we are having cubes only. So a single number is enough.  
 		'''
-		# print("In obect dimensions",self.object_type,object_target_id)
 		obj_type = self.object_type[object_target_id]
 		if obj_type in object_dimensions.keys():
 			return object_dimensions[obj_type]

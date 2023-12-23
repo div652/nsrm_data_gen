@@ -58,7 +58,7 @@ def construct_main(template_file, metadata_file, fps=120., width=1024, height=76
       
       if flag:
         break 
-  # print("I am here at construct main")
+      
   Generator = DataConstructor(timeStep,objects,object_counts)
   Generator.construct_data(height, width, dataset_dir, template_file, metadata_file)
   p.disconnect()
@@ -67,25 +67,15 @@ def construct_main(template_file, metadata_file, fps=120., width=1024, height=76
 def init_bulletclient(timeStep, width=None, height=None, video_filename=None):
   #connection_mode GUI = graphical mode, DIRECT = non-graphical mode
   if video_filename is None:
-    # p.connect(p.GUI)
     p.connect(p.DIRECT)
   else:
-    # p.connect(p.GUI, options = f"--minGraphicsUpdateTimeMs=0 --width={width} --height={height} --mp4=\"{video_filename}\" --mp4fps=48")
     p.connect(p.DIRECT, options = f"--minGraphicsUpdateTimeMs=0 --width={width} --height={height} --mp4=\"{video_filename}\" --mp4fps=48")
   #Add pybullet_data path to search path to load urdf files
   p.setAdditionalSearchPath(pd.getDataPath())
-  # p.setAdditionalSearchPath("./urdf/")
   
   #visualizer and additional settings 
-
-  ## DebugVisualiseCamera options are not needed in DIRECT Mode
-  #p.configureDebugVisualizer(p.COV_ENABLE_GUI, 0)
-  #p.configureDebugVisualizer(p.COV_ENABLE_SHADOWS, 0)
-  #p.configureDebugVisualizer(p.COV_ENABLE_SEGMENTATION_MARK_PREVIEW, 1)
-  #p.configureDebugVisualizer(p.COV_ENABLE_DEPTH_BUFFER_PREVIEW, 1)
   p.setPhysicsEngineParameter(maxNumCmdPer1ms=1000)
   p.setPhysicsEngineParameter(solverResidualThreshold=0)
-  #p.resetDebugVisualizerCamera(**camera_settings['small_table_view'])
   p.setTimeStep(timeStep)
   p.setGravity(0, 0, -10.0)
   p.setRealTimeSimulation(0)
@@ -120,13 +110,13 @@ class DataConstructor(object):
 
   def construct_data(self, height, width, dataset_dir, template_file, metadata_file): 
     construct = ProgramGenerator(p,[0,0,0],self.config,height,width, None ,template_file = template_file, metadata_file = metadata_file)
-    # construct.hide_panda_body()
+    # construct.hide_panda_body() -- used for 
     self.config['scene_data'] = construct.get_scene_info()
     p.disconnect()
 
     previous_programs = []
     for i in range(self.config.get('num_instruction_per_scene',1)):
-      # print("Instruction no : ",  i)
+      
       #create new dir for the sample   
       sample_no = len(os.listdir(dataset_dir))
       smpl_dir = os.path.join(dataset_dir, "{0:0=4d}".format(sample_no))
@@ -137,7 +127,7 @@ class DataConstructor(object):
       construct = ProgramGenerator(p,[0,0,0],self.config,height,width, smpl_dir ,template_file = template_file, metadata_file = metadata_file)
       # construct.hide_panda_body()
 
-      construct.save_instance() #save the initial scene
+      construct.save_instance() #save the initial scene S00
       status = construct.generate_grounded_functional_program(object_choice = self.config.get('instantiation_type', 'random'), MAX_ATEMPTS = self.config.get('max_program_generation_atempts',100))
       if status == False:  # if no compatible program found, remove the sample 
         remove_sample(smpl_dir)
@@ -195,7 +185,6 @@ if __name__ == '__main__':
 
 
   for i in range(args.num_examples):
-    # print(args.num_examples)
     # try:
     construct_main(args.template_file, args.metadata_file, args.fps, args.width, args.height, args.dataset_dir, args.objects)
     # except Exception as e:

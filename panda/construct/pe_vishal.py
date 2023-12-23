@@ -29,12 +29,6 @@ def unique_handler(scene_graph, inputs, value_inputs):
     return '__INVALID__'
   return inputs[0][0]
 
-def choose_index_handler(scene_graph, inputs, value_inputs):
-  assert len(inputs) == 1
-  if len(value_inputs) != 1:
-    return '__INVALID__'
-  return inputs[0][value_inputs[0]]
-
 
 def relate_handler(scene_graph, inputs, value_inputs):
   assert len(inputs) == 1
@@ -73,15 +67,13 @@ execute_handlers = {
   'relate': relate_handler,
   'union': union_handler,
   'intersect': intersect_handler,
-  'complement': complement_handler,
-  'choose_index' : choose_index_handler
+  'complement': complement_handler
 }
 
 class ProgramExecutor(ConstructBase):
     def _init__(self,bullet_client, offset, config, height, width, instance_dir):
         super().__init__(bullet_client, offset, config, height, width, instance_dir)
 
-# only updated the cur_subtask for "move" nodes, not for forall and and program nodes. 
     def execute_symbolic_program(self):
       """
       Use scene graph information to answer a structured question. Most of the
@@ -100,25 +92,7 @@ class ProgramExecutor(ConstructBase):
           node_type = node['type'] 
           if node_type in self.metadata['actions']:
               node['output'] = None   
-              if node_type == 'move':          
-                action, m_object, b_object = node['value_inputs'] + [node_outputs[idx] for idx in node['inputs'][0:2]]
-                distance = node['distance'] if 'distance' in node else 1
-                show = node['visible'] if 'visible' in node else True
-                cur_subtask = (action, m_object, b_object,distance,show)
-                target_position = self.check_action_compatibility([cur_subtask], pos_list[-1])
-                if target_position is None:
-                    print("Returning false due to non compatible action")
-                    return False
-                else:
-                    next_obj_positions = deepcopy(pos_list[-1])
-                    next_obj_positions[m_object] = target_position[0]
-                    pos_list.append(next_obj_positions)
-
-                self.program.append(cur_subtask)
-                self.scene_graph.update(pos_list[-1])
-                node_outputs.append([])
-              
-              elif node_type == 'program':
+              if node_type == 'move':             
                 action, m_object, b_object = node['value_inputs'] + [node_outputs[idx] for idx in node['inputs'][0:2]]
                 cur_subtask = (action, m_object, b_object)
                 target_position = self.check_action_compatibility([cur_subtask], pos_list[-1])
@@ -132,7 +106,7 @@ class ProgramExecutor(ConstructBase):
                 self.program.append(cur_subtask)
                 self.scene_graph.update(pos_list[-1])
                 node_outputs.append([])
-                
+              
               elif node_type == "forall":
                 action,m_object_set,b_object =  (node['value_inputs'] + [node_outputs[idx] if idx != 'None' else None for idx in node['inputs'][0:2] ])
                 for m in m_object_set:
@@ -184,4 +158,4 @@ class ProgramExecutor(ConstructBase):
                 return False
       return True
   
-      
+        

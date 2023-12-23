@@ -18,7 +18,6 @@ class ProgramGenerator(ProgramExecutor):
         self.metadata = self.load_metadata(metadata_file)
         self.config = config
         super().__init__(bullet_client, offset, config, height, width, instance_dir)
-        
         self.generate_random_scene()
         self.save_position_info()
 
@@ -72,10 +71,6 @@ class ProgramGenerator(ProgramExecutor):
             num_trays = object_counts.get('num_trays', 0)
             num_dices = object_counts.get('num_dices', 0)
             num_legos = object_counts.get('num_legos', 0)
-            num_movable_objects = num_cubes + num_dices + num_legos
-            # total_objects = num_cubes + num_trays + num_dices + num_legos
-            assert num_movable_objects > 0
-
             
             # Unique Colors for All Objects. The indices are used to represent the colors
             unique_tray_colors = np.random.permutation(len(ColorList))[: num_trays]
@@ -88,63 +83,53 @@ class ProgramGenerator(ProgramExecutor):
             cube_idx, dice_idx, lego_idx = 0, 0, 0
             random.shuffle(self.object_type)
             
+            # this is the number of objects that are supposed to be identical to the first object
             self.numIdenticalToFirst = self.template['numIdenticalToFirst'] if 'numIdenticalToFirst' in self.template else 0
-            clearNums = self.template['clearNums'] if 'clearNums' in self.template else 0
-            clearDirection = self.template['clearDirection'] if 'clearDirection' in self.template else None
-            block_positions = self.get_block_positions(num_movable_objects+self.numIdenticalToFirst)
             
-            first_block_position = block_positions[0]
-            if self.object_type[0] == 'Cube':
-                object_color_idx = int(unique_block_colors[0])
-                self.objects.append(Cube(self.bullet_client, flags,first_block_position, object_color_idx,orn = self.obj_orn))
-                cube_idx+=1
-                # print(cube_idx, self.objects[-1].object_idx, self.objects[-1].color,"Small Cube")
-            elif self.object_type[0] == 'Dice':
-                object_color_idx = int(unique_dice_colors[0])
-                self.objects.append(Dice(self.bullet_client, flags, first_block_position, object_color_idx,orn = self.obj_orn))
-                # print(dice_idx, self.objects[-1].object_idx, self.objects[-1].color,"Dice")
-                dice_idx+=1
-            elif self.object_type[0] == 'Lego':
-                object_color_idx = int(unique_lego_colors[0])
-                self.objects.append(Lego(self.bullet_client, flags, position, object_color_idx,orn = self.obj_orn))
-                # print(lego_idx, self.objects[-1].object_idx, self.objects[-1].color,"Lego")
-                lego_idx+=1
+            num_movable_objects = num_cubes + num_dices + num_legos + self.numIdenticalToFirst
+            # total_objects = num_cubes + num_trays + num_dices + num_legos
+            assert num_movable_objects > 0
+            
+            block_positions = self.get_block_positions(num_movable_objects)
 
-            for idx in range(self.numIdenticalToFirst):
-                position = block_positions[idx+1]
+            for idx in range(self.numIdenticalToFirst+1):
+                position = block_positions[idx]
                 if self.object_type[0] == 'Cube':
                     object_color_idx = int(unique_block_colors[0])
                     self.objects.append(Cube(self.bullet_client, flags,position, object_color_idx,orn = self.obj_orn))
                     
-                    # print(cube_idx, self.objects[-1].object_idx, self.objects[-1].color,"Small Cube")
                 elif self.object_type[0] == 'Dice':
                     object_color_idx = int(unique_dice_colors[0])
                     self.objects.append(Dice(self.bullet_client, flags, position, object_color_idx,orn = self.obj_orn))
-                    # print(dice_idx, self.objects[-1].object_idx, self.objects[-1].color,"Dice")
+
                 elif self.object_type[0] == 'Lego':
                     object_color_idx = int(unique_lego_colors[0])
                     self.objects.append(Lego(self.bullet_client, flags, position, object_color_idx,orn = self.obj_orn))
-                    # print(lego_idx, self.objects[-1].object_idx, self.objects[-1].color,"Lego")
 
-            for idx in range(1,num_movable_objects):
+            if self.object_type[0] == 'Cube' : 
+                cube_idx+=1
+            elif self.object_type[0] == 'Dice' :
+                dice_idx+=1
+            elif self.object_type[0] == 'Lego':
+                lego_idx+=1
+ 
+ 
+            for idx in range(1,num_movable_objects-self.numIdenticalToFirst):
                 position = block_positions[self.numIdenticalToFirst +  idx]
                 if self.object_type[idx] == 'Cube':
                     object_color_idx = int(unique_block_colors[cube_idx])
                     self.objects.append(Cube(self.bullet_client, flags,position, object_color_idx,orn = self.obj_orn))
                     cube_idx += 1
-                    # print(cube_idx, self.objects[-1].object_idx, self.objects[-1].color,"Small Cube")
+                    
                 elif self.object_type[idx] == 'Dice':
                     object_color_idx = int(unique_dice_colors[dice_idx])
                     self.objects.append(Dice(self.bullet_client, flags, position, object_color_idx,orn = self.obj_orn))
                     dice_idx += 1
-                    # print(dice_idx, self.objects[-1].object_idx, self.objects[-1].color,"Dice")
+
                 elif self.object_type[idx] == 'Lego':
                     object_color_idx = int(unique_lego_colors[lego_idx])
                     self.objects.append(Lego(self.bullet_client, flags, position, object_color_idx,orn = self.obj_orn))
                     lego_idx += 1
-                    # print(lego_idx, self.objects[-1].object_idx, self.objects[-1].color,"Lego")
-                    
-            
             
 
             # Initialize Trays

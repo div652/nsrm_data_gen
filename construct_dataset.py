@@ -7,6 +7,9 @@ import subprocess
 import tempfile
 import json
 
+# CHUNK_SIZE is the max number of examples per tmp_train folder
+# eg. if 2k examples of a template are generated, 40 different tmp_train folders will be instantated. 
+# This is to leverage the speed up due to the parallel generation of examples. 
 CHUNK_SIZE= 50
 
 template_file = {

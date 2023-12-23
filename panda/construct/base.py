@@ -107,7 +107,6 @@ class ConstructBase(PandaWorld):
     
 		if use_panda:
 			self.show_panda_body()
-		#self.bullet_client.resetDebugVisualizerCamera(**camera_settings['small_table_view'])
 
 	
 	def get_scene_info(self):
